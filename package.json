@@ -1,0 +1,22 @@
+{
+  "name": "voice_assistant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts" : {
+    "start": "node /Voice_assistant/server/index.js",
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruslansergeevich96/Voice_assistant.git"
+  },
+  "author": "Mascot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruslansergeevich96/Voice_assistant/issues"
+  },
+  "homepage": "https://github.com/Ruslansergeevich96/Voice_assistant#readme"
+}
