@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts" : {
+  "scripts": {
     "start": "node /Voice_assistant/server/index.js",
     "test": "jest",
     "build": "tsc",
@@ -18,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/Ruslansergeevich96/Voice_assistant/issues"
   },
-  "homepage": "https://github.com/Ruslansergeevich96/Voice_assistant#readme"
+  "homepage": "https://github.com/Ruslansergeevich96/Voice_assistant#readme",
+  "dependencies": {
+    "apollo-client": "^2.6.10",
+    "apollo-server": "^3.11.1",
+    "apollo-server-express": "^3.11.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^15.8.0",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.28.0",
+    "uuid": "^9.0.0"
+  }
 }

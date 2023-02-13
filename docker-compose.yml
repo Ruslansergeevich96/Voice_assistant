@@ -1,0 +1,37 @@
+version: "3.8"
+ 
+services:
+
+  main:
+    container_name: Voice_assistant 
+    build: 
+      context: .
+    env_file:
+      - ./server/.env
+    volumes:
+      - .:/Voice_assistant
+      - /node_modules
+    ports: 
+      - 7200:7200
+      - 9229:9229
+    command: bash -c "sleep 5 && npm run start"
+    depends_on: 
+      - postgres
+    restart: always
+
+  postgres:
+    container_name: postgres_voice_assistant
+    image: postgres
+    env_file:
+      - ./server/.env
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+    
+volumes:
+  pgdata:
+
