@@ -5,6 +5,7 @@ const { ApolloServer, gql } = require("apollo-server-express");
 const { typeDefs } = require("./Schema/TypeDefs");
 const { resolvers } = require("./Schema/Resolvers");
 const { pool } = require("./models/models");
+const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 
 const PORT = process.env.PORT || 7200;
@@ -24,6 +25,7 @@ const server = new ApolloServer({
 app.use(cors());
 
 app.get("/user", userRoutes.getUsers);
+app.use("/auth", authRoutes);
 
 const start = async () => {
   try {
